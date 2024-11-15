@@ -1,0 +1,49 @@
+<!-- res/layout/activity_dashboard.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".DashboardActivity">
+
+    <!-- Location and Search -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bilzen, Tanjungbalai"
+            android:textColor="#0C0C0C"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            app:tint="#ffffff" />
+
+    </LinearLayout>
+
+    <!-- Promo Banner -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/promo_banner_background" />
+
+    <!-- Scrollable Coffee Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
