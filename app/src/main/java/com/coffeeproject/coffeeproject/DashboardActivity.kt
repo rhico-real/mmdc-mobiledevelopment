@@ -1,6 +1,7 @@
 package com.coffeeproject.coffeeproject
 
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,8 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        supportActionBar?.hide()
 
         // Set up RecyclerView with GridLayoutManager
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
