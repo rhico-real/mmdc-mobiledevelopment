@@ -2,6 +2,7 @@ package com.coffeeproject.coffeeproject
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,11 @@ class OrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
+
+        supportActionBar?.hide()
+
+        val backButton: ImageButton = findViewById(R.id.backButton)
+        backButton.setOnClickListener { finish() }
 
         // Handle back button click (optional)
 //        findViewById<ImageView>(R.id.backButton).setOnClickListener {
